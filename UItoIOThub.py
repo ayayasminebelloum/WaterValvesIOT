@@ -1,8 +1,6 @@
 import streamlit as st
 import json
 from azure.iot.hub import IoTHubRegistryManager
-# import the IOT exceptions
-from datetime import datetime
 import time
 
 # Define Azure IoT Hub connection string
@@ -113,9 +111,7 @@ def user_actions():
     print("Keys in data:", list(data.keys()))
 
     for device_id in device_connection_devices:
-        st.write(f" {device_id} status: {data[device_id]['ValveStatus']}")
-
-
+        st.write(f"Valve {device_id} status: {data.get(device_id, {}).get('ValveStatus', 'Unknown')}")
 
 
 # Function for sleep action
