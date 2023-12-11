@@ -113,8 +113,9 @@ def user_actions():
     print("Keys in data:", list(data.keys()))
 
     for device_id in device_connection_devices:
-        st.write(f"{device_id} status: {data[device_id]['ValveStatus']}")
-    print_valve_status_in_terminal()  # Print valve status in the terminal
+        st.write(f" {device_id} status: {data[device_id]['ValveStatus']}")
+
+
 
 
 # Function for sleep action
