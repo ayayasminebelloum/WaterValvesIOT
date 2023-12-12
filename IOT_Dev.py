@@ -3,7 +3,7 @@ import time  # Import the time module
 from azure.iot.device import IoTHubDeviceClient,Message
 
 # Azure IoT Hub connection parameters
-device_connection_string = "HostName=WaterValves.azure-devices.net;DeviceId=Valve1;SharedAccessKey=k/DtGT+J60IbObQGsfVU6oDSiKHmiWOPAAIoTBVYwOU="
+device_connection_string = "YOURCONNECTIONSTRING"
 
 # Create an instance of the device client
 client = IoTHubDeviceClient.create_from_connection_string(device_connection_string)
